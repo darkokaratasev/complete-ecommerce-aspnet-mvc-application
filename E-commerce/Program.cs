@@ -1,10 +1,14 @@
 using E_commerce.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var Configuration = builder.Configuration;
+var secret = builder.Configuration["GoogleRecaptchaV3:Secret"];
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<AppDbContext>();
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
 
 var app = builder.Build();
 

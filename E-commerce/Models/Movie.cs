@@ -33,4 +33,4 @@ namespace E_commerce.Models
         public Cinema Producer { get; set; }
     }
 }
-}
+
