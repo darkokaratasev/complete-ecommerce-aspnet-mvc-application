@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+
 namespace E_commerce.Models
 {
     public class Movie
@@ -24,13 +25,13 @@ namespace E_commerce.Models
 
         //Cinema
         public int CinemaId { get; set; }
-        [ForeignKey("CinemaId")]
+        
         public Cinema Cinema { get; set; }
-
+        [ForeignKey("CinemaId")]
         //Producer
         public int ProducerId { get; set; }
         [ForeignKey("ProducerId")]
-        public Cinema Producer { get; set; }
+        public Producer Producer { get; set; }
     }
 }
 

@@ -1,6 +1,14 @@
 ﻿namespace E_commerce.Data.Enums
 {
-    public class MovieCategory
+    public enum MovieCategory
     {
+
+        Action = 1,
+        Comedy,
+        Drama,
+        Documentary,
+        Cartoon,
+        Horror
     }
+    
 }
