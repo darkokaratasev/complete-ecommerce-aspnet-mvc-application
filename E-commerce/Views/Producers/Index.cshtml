@@ -1,11 +1,11 @@
 ﻿@*Define model*@
 
-@model IEnumerable<Actor>
+@model IEnumerable<Producer>
 
 @*Define ViewData*@
 
 @{
-    ViewData["Title"] = "List of Actors";
+    ViewData["Title"] = "List of Producers";
 }
 
 @*Write Code*@
@@ -13,9 +13,10 @@
 <div class="row">
     <div class="col-md-8 offset-md-2">
 
-        <table class="table">     
+        <table class="table">
             <thead>
                 <tr class="text-center">
+
                     <th>@Html.DisplayNameFor(model => model.ProfilePictureURL)</th>
                     <th>@Html.DisplayNameFor(model => model.FullName)</th>
                     <th>@Html.DisplayNameFor(model => model.Bio)</th>
@@ -27,7 +28,7 @@
                 {
                     <tr>
                         <td class="align-middle">
-                            <img class="rounded-circle" src="@item.ProfilePictureURL" alt="@item.FullName" style="max-width: 150px"/>
+                            <img class="rounded-circle" src="@item.ProfilePictureURL" alt="@item.FullName" style="max-width: 150px" />
                         </td>
                         <td class="align-middle">
                             @Html.DisplayFor(model => item.FullName)
@@ -47,7 +48,7 @@
 
 
 
-        </table> 
+        </table>
 
     </div>
 </div>
